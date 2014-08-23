@@ -18,7 +18,11 @@
 	<body onload="ImaginaryWorld.start()">
 		<h1>Imaginary World</h1>
 		<h3>An awesome game</h3>
-		<h3>Welcome back, <span id="name"></span>! You have <span id="hp"></span> hp.</h3>
+		<h3>
+			Welcome back, <span id="name" onblur="ImaginaryWorld.updateName()" contenteditable></span>! 
+			You have <span id="hp"></span> hp and <span id="xp"></span> xp.
+			You play in <span id="time"></span> mode.
+		</h3>
 		
 		<h2>Day Missions</h2>
 			<div id="day">
