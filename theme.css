@@ -1,3 +1,13 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+html {
+	width: 90%;
+	margin: auto;
+}
+
 body {
 	transition: all .2s linear;
 }
@@ -13,3 +23,25 @@ body.night {
 .hidden {
 	display: none;
 }
+
+.header {
+	padding: 20px 0px 20px 0px;
+	margin-left: -2.5%;
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+}
+
+.header h1 {
+	flex-grow: 1;
+}
+
+@media all and (max-width: 700px) {
+	.header {
+		flex-direction: column;
+	}
+	.header h1 {
+		flex-grow: 0;
+	}
+}
+
