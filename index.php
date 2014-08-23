@@ -22,20 +22,12 @@
 			<h1>Imaginary World</h1>
 			<h3>Howdy, <span id="name" onblur="ImaginaryWorld.updateName()" contenteditable></span>!</h3>
 		</div>
-		<div>
-			<h3>An awesome game</h3>
-			<h3>
-				You have
-				<span id="hp"></span>
-				hp and
-				<span id="xp"></span>
-				xp. You play in
-				<span id="time"></span>
-				mode.
-				<button onclick="ImaginaryWorld.changeMode()">
-					Change mode now
-				</button>
-			</h3>
+		
+		<div class="stats">
+			<h3>HP: <span id="hp"></span></h3>
+			<h3>XP: <span id="xp"></span></h3>
+			<h3>You play in <span id="time"></span> mode</h3>
+			<h3><button onclick="ImaginaryWorld.changeMode()">Change game mode</button></h3>
 		</div>
 
 		<div id="day">
