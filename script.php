@@ -24,6 +24,20 @@ var ImaginaryWorld = {
 		this.savingLoop();
 		this.updateVariables();
 		this.showHideMissions();
+		this.changeTheme();
+	},
+	
+	changeTheme: function() {
+		switch(this.player.time) {
+			case "day":
+				$("body").addClass("day");
+				$("body").removeClass("night");
+				break;
+			case "night":
+				$("body").addClass("night");
+				$("body").removeClass("day");
+				break;
+		}
 	},
 	
 	showHideMissions: function() {
@@ -46,6 +60,7 @@ var ImaginaryWorld = {
 			this.player.time = "day";
 		}
 		this.showHideMissions();
+		this.changeTheme();
 	},
 	
 	updateVariables: function() {

@@ -15,7 +15,7 @@
 		
 	</head>
 
-	<body onload="ImaginaryWorld.start()">
+	<body class="day" onload="ImaginaryWorld.start()">
 		<h1>Imaginary World</h1>
 		<h3>An awesome game</h3>
 		<h3>

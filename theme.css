@@ -1,6 +1,14 @@
 body {
+	transition: all .2s linear;
+}
+
+body.day {
 	background: #eee;
 	color: #333;
+}
+body.night {
+	background: #333;
+	color: #eee;
 }
 .hidden {
 	display: none;
