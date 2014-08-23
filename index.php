@@ -20,7 +20,7 @@
 	<body class="day" onload="ImaginaryWorld.start()">
 		<div class="header">
 			<h1>Imaginary World</h1>
-			<h3>Howdy, <span id="name" onblur="ImaginaryWorld.updateName()" contenteditable></span>!</h3>
+			<h3>Howdy, <span id="name" onblur="ImaginaryWorld.updateName()" contenteditable></span></h3>
 		</div>
 		
 		<div class="stats">
