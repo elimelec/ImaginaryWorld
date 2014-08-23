@@ -27,7 +27,7 @@
 		
 		<div id="day">
 			<h2>Day Missions</h2>
-			<? foreach ($night_missions as $mission) { ?>
+			<? foreach ($day_missions as $mission) { ?>
 				<h4><?=$mission->title?></h4>
 				<h5><?=$mission->description?></h5>
 				<button onclick="ImaginaryWorld.missionDone(<?=$mission->id?>, 'day')">Do mission</button>
