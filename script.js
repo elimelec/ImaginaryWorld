@@ -12,7 +12,6 @@ var ImaginaryWorld = {
 	
 	start: function() {
 		if(this.getItem("saved")) {
-			alert("saved");
 			this.load();
 		}
 		this.savingLoop();
