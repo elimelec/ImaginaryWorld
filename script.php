@@ -38,6 +38,7 @@ var ImaginaryWorld = {
 				$("body").removeClass("day");
 				break;
 		}
+		this.updateVariables();
 	},
 	
 	showHideMissions: function() {
