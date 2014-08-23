@@ -23,6 +23,29 @@ var ImaginaryWorld = {
 		}
 		this.savingLoop();
 		this.updateVariables();
+		this.showHideMissions();
+	},
+	
+	showHideMissions: function() {
+		switch(this.player.time) {
+			case "day":
+				$("#night").addClass("hidden");
+				$("#day").removeClass("hidden");
+				break;
+			case "night":
+				$("#day").addClass("hidden");
+				$("#night").removeClass("hidden");
+				break;
+		}
+	},
+	
+	changeMode: function() {
+		if(this.player.time == "day") {
+			this.player.time = "night";
+		} else {
+			this.player.time = "day";
+		}
+		this.showHideMissions();
 	},
 	
 	updateVariables: function() {

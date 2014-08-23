@@ -2,3 +2,6 @@ body {
 	background: #eee;
 	color: #333;
 }
+.hidden {
+	display: none;
+}
