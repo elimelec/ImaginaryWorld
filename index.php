@@ -1,3 +1,9 @@
+<?php 
+	include 'db.php';
+
+
+?>
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -5,7 +11,7 @@
 		<link rel="stylesheet" type="text/css" href="theme.css" />
 		
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" async></script>
-		<script type="text/javascript" src="script.js" async></script>
+		<script type="text/javascript" src="script.php" async></script>
 		
 	</head>
 
@@ -15,8 +21,20 @@
 		<h3>Welcome back, <span id="name"></span>! You have <span id="hp"></span> hp.</h3>
 		
 		<h2>Day Missions</h2>
-			<div id="day"></div>
+			<div id="day">
+				<? foreach ($night_missions as $mission) { ?>
+					<h4><?=$mission->title?></h4>
+					<h5><?=$mission->description?></h5>
+					<button onclick="ImaginaryWorld.missionDone(<?=$mission->id?>, 'day')">Do mission</button>
+				<? } ?>
+			</div>
 		<h2>Night Missions</h2>
-			<div id="night"></div>
+			<div id="night">
+				<? foreach ($night_missions as $mission) { ?>
+					<h4><?=$mission->title?></h4>
+					<h5><?=$mission->description?></h5>
+					<button onclick="ImaginaryWorld.missionDone(<?=$mission->id?>, 'night')">Do mission</button>
+				<? } ?>
+			</div>
 	</body>
 </html>
