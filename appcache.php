@@ -1,3 +1,6 @@
+<?php
+header('Content-Type: text/cache-manifest');
+?>
 CACHE MANIFEST
 # 201408242302
 

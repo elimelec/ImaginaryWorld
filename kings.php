@@ -2,7 +2,7 @@
 	include 'kings_db.php';
 ?>
 <!DOCTYPE html>
-<html manifest="manifest.appcache">
+<html manifest="appcache.php">
 	<head>
 		<meta name="viewport" content="width=device-width">
 		<title>Imaginary World</title>
