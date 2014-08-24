@@ -1,8 +1,5 @@
-<?php
-header('Content-Type: text/cache-manifest');
-?>
 CACHE MANIFEST
-# 201408242236
+# 201408242238
 
 # Explicitly cached entries
 /
