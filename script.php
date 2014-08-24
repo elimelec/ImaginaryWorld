@@ -15,7 +15,7 @@ var ImaginaryWorld = {
 	savingLoop: function() {
 		setInterval(function() {
 			ImaginaryWorld.save();
-		}, 1000);
+		}, 10000);
 	},
 	
 	gameLoop: function() {
@@ -94,6 +94,34 @@ var ImaginaryWorld = {
 		$("#hp").text(this.player.hp);
 		$("#xp").text(this.player.xp);
 		$("#time").text(this.player.time);
+		
+		for(var i = 0; i < this.day.missions.length; i++) {
+			var id = "m"+i+"day";
+			$("#"+id).text(this.getMissionsKingsProgress(id));
+		}
+		
+		for(var i = 0; i < this.night.missions.length; i++) {
+			var id = "m"+i+"night";
+			$("#"+id).text(this.getMissionsKingsProgress(id));
+		}
+		
+		for(var i = 0; i < this.day.kings.length; i++) {
+			var id = "k"+i+"day";
+			$("#"+id).text(this.getMissionsKingsProgress(id));
+		}
+		
+		for(var i = 0; i < this.night.kings.length; i++) {
+			var id = "k"+i+"night";
+			$("#"+id).text(this.getMissionsKingsProgress(id));
+		}
+	},
+	
+	getMissionsKingsProgress: function(saveName) {
+		saveValue = this.getItem(saveName);
+		if(saveValue === null) {
+			return 0;
+		} 
+		return parseInt(saveValue);
 	},
 	
 	missionDone: function(id, time) {
@@ -107,7 +135,20 @@ var ImaginaryWorld = {
 			this.player.hp -= 10;
 			break;
 		}
+		this.saveMissionsKingsProgress("m", id, time);
 		this.updateVariables();
+	},
+	
+	saveMissionsKingsProgress: function(type, id, time) {
+		var saveName = type+id+time;
+		var previousValue = this.getItem(saveName);
+		var saveValue;
+		if(previousValue === null) {
+			saveValue = 1;
+		} else {
+			saveValue = parseInt(previousValue) + 1;
+		}
+		this.setItem(saveName, saveValue);
 	},
 	
 	fightKing: function(id, time) {
@@ -127,6 +168,7 @@ var ImaginaryWorld = {
 		} else {
 			this.player.xp -= kingPower;
 			this.player.hp -= 20;
+			this.saveMissionsKingsProgress("k", id, time);
 		}
 		this.disableEnableFightKingButtons();
 		this.updateVariables();
