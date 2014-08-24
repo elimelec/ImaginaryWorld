@@ -2,7 +2,7 @@
 	include 'missions_db.php';
 ?>
 <!DOCTYPE html>
-<html>
+<html manifest="manifest.appcache">
 	<head>
 		<meta name="viewport" content="width=device-width">
 		<title>Imaginary World</title>
@@ -10,7 +10,7 @@
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" async></script>
 		<script type="text/javascript" src="script.php" async></script>
 	</head>
-	<body class="day" onload="ImaginaryWorld.start()" onbeforeunload="ImaginaryWorld.save()" manifest="manifest.appcache">
+	<body class="day" onload="ImaginaryWorld.start()" onbeforeunload="ImaginaryWorld.save()">
 		<div class="header">
 			<h1>Imaginary World</h1>
 			<h3>Howdy, <span id="name" onblur="ImaginaryWorld.updateName()" contenteditable></span></h3>
