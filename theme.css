@@ -34,9 +34,7 @@ body.night {
 	margin-left: -2.5%;
 }
 
-.stats,
-.header,
-.missions_container {
+.stats, .header, .missions_container {
 	padding: 20px 0px 20px 0px;
 	display: flex;
 	flex-direction: row;
@@ -67,18 +65,17 @@ body.night {
 	padding: 5px 5px 5px 20px;
 }
 
-
 @media all and (max-width: 500px) {
 	.header {
 		flex-direction: column;
 	}
-	
+
 }
 
 @media all and (max-width: 650px) {
 	.stats {
 		flex-direction: column;
 	}
-	
+
 }
 
