@@ -23,7 +23,7 @@
 			<a href="kings.php"><button>Kings</button></a>
 		</div>
 		<div class="missions_area">
-		<h2>Missions</h2>
+			<h2>Missions</h2>
 			<div id="day">
 				<div class="missions_container">
 					<? foreach ($day_missions as $mission) { ?>
