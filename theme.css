@@ -12,6 +12,12 @@ body {
 	transition: all .2s linear;
 }
 
+button {
+	padding: 5px 20px 5px 20px;
+	margin: 10px 0px 0px 0px;
+	font-weight: bold;
+}
+
 body.day {
 	background: #eee;
 	color: #333;
@@ -25,14 +31,12 @@ body.night {
 }
 
 .header {
-	padding: 20px 0px 20px 0px;
 	margin-left: -2.5%;
-	display: flex;
-	align-items: center;
-	flex-direction: row;
 }
 
-.stats {
+.stats,
+.header,
+.missions_container {
 	padding: 20px 0px 20px 0px;
 	display: flex;
 	flex-direction: row;
@@ -40,19 +44,41 @@ body.night {
 	justify-content: space-between;
 }
 
+.missions_container {
+	justify-content: flex-start;
+	flex-wrap: wrap;
+	align-content: flex-start;
+}
+
 .header h1 {
 	flex-grow: 1;
 }
 
-@media all and (max-width: 700px) {
+.missions_area {
+	margin: 20px 0px 20px 0px;
+}
+
+.mission {
+	padding: 20px;
+	width: 250px;
+}
+
+.mission h3 {
+	padding: 5px 5px 5px 20px;
+}
+
+
+@media all and (max-width: 500px) {
 	.header {
 		flex-direction: column;
 	}
-	.header h1 {
-		flex-grow: 0;
-	}
+	
+}
+
+@media all and (max-width: 650px) {
 	.stats {
 		flex-direction: column;
 	}
+	
 }
 

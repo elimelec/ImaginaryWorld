@@ -29,23 +29,34 @@
 			<h3>You play in <span id="time"></span> mode</h3>
 			<h3><button onclick="ImaginaryWorld.changeMode()">Change game mode</button></h3>
 		</div>
-
-		<div id="day">
-			<h2>Day Missions</h2>
-			<? foreach ($day_missions as $mission) { ?>
-				<h4><?=$mission->title?></h4>
-				<h5><?=$mission->description?></h5>
-				<button onclick="ImaginaryWorld.missionDone(<?=$mission->id?>, 'day')">Do mission</button>
-			<? } ?>
-		</div>
-		
-		<div id="night">
-			<h2>Night Missions</h2>
-			<? foreach ($night_missions as $mission) { ?>
-				<h4><?=$mission->title?></h4>
-				<h5><?=$mission->description?></h5>
-				<button onclick="ImaginaryWorld.missionDone(<?=$mission->id?>, 'night')">Do mission</button>
-			<? } ?>
+	
+		<div class="missions_area">
+			<div id="day">
+				<h2>Day Missions</h2>
+				<div class="missions_container">
+					<? foreach ($day_missions as $mission) { ?>
+						<div class="mission">
+							<h3><?=$mission->title?></h3>
+							<p><?=$mission->description?></p>
+							<button onclick="ImaginaryWorld.missionDone(<?=$mission->id?>, 'day')">Do mission</button>
+						</div>
+					<? } ?>
+				</div>
+			</div>
+			
+			<div id="night">
+				<h2>Night Missions</h2>
+				<div class="missions_container">
+					<? foreach ($night_missions as $mission) { ?>
+						<div class="mission">
+							<h3><?=$mission->title?></h3>
+							<p><?=$mission->description?></p>
+							<button onclick="ImaginaryWorld.missionDone(<?=$mission->id?>, 'night')">Do mission</button>
+						</div>
+					<? } ?>
+				</div>
+			</div>
+			
 		</div>
 	</body>
 </html>
