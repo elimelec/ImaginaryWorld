@@ -1,5 +1,5 @@
 <?php 
-	include 'kings_dbs.php';
+	include 'kings_db.php';
 ?>
 <!DOCTYPE html>
 <html>
