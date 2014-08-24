@@ -24,6 +24,7 @@
 		</div>
 		<div class="missions_area">
 			<h2>Missions</h2>
+			<p>Do missions to gain experience. You can do as many as you like.</p>
 			<div id="day">
 				<div class="missions_container">
 					<? foreach ($day_missions as $mission) { ?>
