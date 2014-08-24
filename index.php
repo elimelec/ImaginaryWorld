@@ -19,7 +19,7 @@
 			<h3>HP: <span id="hp"></span></h3>
 			<h3>XP: <span id="xp"></span></h3>
 			<h3>You play in <span id="time"></span> mode</h3>
-			<h3><button onclick="ImaginaryWorld.changeMode()">Change game mode</button></h3>
+			<button onclick="ImaginaryWorld.changeMode()">Change game mode</button>
 		</div>
 		<div class="missions_area">
 			<div id="day">
