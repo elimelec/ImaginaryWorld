@@ -24,7 +24,7 @@
 		</div>
 		<div class="missions_area">
 			<h2>Kings</h2>
-			<p>Convert a portion of your experience to fight a king. You lose 20 hp each fight.</p>
+			<p>Convert a portion of your experience into energy to fight a king. You lose 20 hp each fight.</p>
 			<div id="day">
 				<div class="missions_container">
 					<? foreach ($day_kings as $king) { ?>
