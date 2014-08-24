@@ -86,6 +86,27 @@ var ImaginaryWorld = {
 		this.updateVariables();
 	},
 	
+	fightKing: function(id, time) {
+		var kingPower;
+		var yourPower = this.player.xp;
+		switch (time) {
+		case "day":
+			kingPower = this.day.kings[id].difficulty;
+			break;
+		case "night":
+			kingPower = this.night.kings[id].difficulty;
+			break;
+		}
+		if (yourPower <= kingPower) {
+			this.player.xp = 0;
+			this.player.hp = 1;
+		} else {
+			this.player.xp -= kingPower;
+			this.player.hp -= 20;
+		}
+		this.updateVariables();
+	},
+	
 	save: function() {
 		this.setItem("hp", this.player.hp);
 		this.setItem("name", this.player.name);
