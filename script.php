@@ -74,11 +74,11 @@ var ImaginaryWorld = {
 	missionDone: function(id, time) {
 		switch (time) {
 		case "day":
-			this.player.xp += this.day.missions[id-1].difficulty;
+			this.player.xp += this.day.missions[id].difficulty;
 			this.player.hp += 10;
 			break;
 		case "night":
-			this.player.xp += this.night.missions[id-1].difficulty;
+			this.player.xp += this.night.missions[id].difficulty;
 			this.player.hp -= 10;
 			break;
 		}
