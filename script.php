@@ -27,7 +27,9 @@ var ImaginaryWorld = {
 	},
 	
 	loop: function() {
-		this.player.hp++;
+		if(this.player.hp < 100) {
+			this.player.hp++;
+		}
 	},
 	
 	disableEnableFightKingButtons: function() {
