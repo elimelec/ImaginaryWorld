@@ -15,7 +15,28 @@ var ImaginaryWorld = {
 	savingLoop: function() {
 		setInterval(function() {
 			ImaginaryWorld.save();
-		}, 5000);
+		}, 1000);
+	},
+	
+	gameLoop: function() {
+		setInterval(function() {
+			ImaginaryWorld.loop();
+			ImaginaryWorld.disableEnableFightKingButtons();
+			ImaginaryWorld.updateVariables();
+		}, 1000);
+	},
+	
+	loop: function() {
+		this.player.hp++;
+	},
+	
+	disableEnableFightKingButtons: function() {
+		$buttons = $(".fight_king");
+		if(this.player.hp <= 20) {
+			$buttons.attr("disabled", "disabled");
+		} else {
+			$buttons.removeAttr("disabled");
+		}
 	},
 	
 	start: function() {
@@ -23,6 +44,7 @@ var ImaginaryWorld = {
 			this.load();
 		}
 		this.savingLoop();
+		this.gameLoop();
 		this.updateVariables();
 		this.showHideMissions();
 		this.changeTheme();
@@ -104,6 +126,7 @@ var ImaginaryWorld = {
 			this.player.xp -= kingPower;
 			this.player.hp -= 20;
 		}
+		this.disableEnableFightKingButtons();
 		this.updateVariables();
 	},
 	
