@@ -27,11 +27,13 @@
 			<p>Do missions to gain experience. You can do as many as you like.</p>
 			<div id="day">
 				<div class="missions_container">
+					<? $i = 0; ?>
 					<? foreach ($day_missions as $mission) { ?>
 						<div class="mission">
 							<h3><?=$mission->title?></h3>
 							<p><?=$mission->description?></p>
 							<p>XP gain: <?=$mission->difficulty?></p>
+							<p>You did this mission <span id="m<?=$i++?>day"></span> times
 							<button onclick="ImaginaryWorld.missionDone(<?=$mission->id?>, 'day')">Do mission</button>
 						</div>
 					<? } ?>
@@ -39,11 +41,13 @@
 			</div>
 			<div id="night">
 				<div class="missions_container">
+					<? $i = 0; ?>
 					<? foreach ($night_missions as $mission) { ?>
 						<div class="mission">
 							<h3><?=$mission->title?></h3>
 							<p><?=$mission->description?></p>
 							<p>XP gain: <?=$mission->difficulty?></p>
+							<p>You did this mission <span id="m<?=$i++?>night"></span> times
 							<button onclick="ImaginaryWorld.missionDone(<?=$mission->id?>, 'night')">Do mission</button>
 						</div>
 					<? } ?>

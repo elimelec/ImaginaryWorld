@@ -27,11 +27,13 @@
 			<p>Convert a portion of your experience into energy to fight a king. You lose 20 hp each fight.</p>
 			<div id="day">
 				<div class="missions_container">
+					<? $i = 0; ?>
 					<? foreach ($day_kings as $king) { ?>
 						<div class="mission">
 							<h3><?=$king->title?></h3>
 							<p><?=$king->description?></p>
 							<p>Strength: <?=$king->difficulty?></p>
+							<p>You won the fight <span id="k<?=$i++?>day"></span> times
 							<button class="fight_king" onclick="ImaginaryWorld.fightKing(<?=$king->id?>, 'day')">Fight king</button>
 						</div>
 					<? } ?>
@@ -39,11 +41,13 @@
 			</div>
 			<div id="night">
 				<div class="missions_container">
+					<? $i = 0; ?>
 					<? foreach ($night_kings as $king) { ?>
 						<div class="mission">
 							<h3><?=$king->title?></h3>
 							<p><?=$king->description?></p>
 							<p>Strength: <?=$king->difficulty?></p>
+							<p>You won the fight <span id="k<?=$i++?>night"></span> times
 							<button class="fight_king" onclick="ImaginaryWorld.fightKing(<?=$king->id?>, 'night')">Fight king</button>
 						</div>
 					<? } ?>
