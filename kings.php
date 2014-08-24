@@ -23,8 +23,8 @@
 			<a href="index.php"><button>Missions</button></a>
 		</div>
 		<div class="missions_area">
+		<h2>Kings</h2>
 			<div id="day">
-				<h2>Day Missions</h2>
 				<div class="missions_container">
 					<? foreach ($day_kings as $king) { ?>
 						<div class="mission">
@@ -37,7 +37,6 @@
 				</div>
 			</div>
 			<div id="night">
-				<h2>Night Missions</h2>
 				<div class="missions_container">
 					<? foreach ($night_kings as $king) { ?>
 						<div class="mission">
