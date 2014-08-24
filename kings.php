@@ -30,7 +30,7 @@
 						<div class="mission">
 							<h3><?=$king->title?></h3>
 							<p><?=$king->description?></p>
-							<button onclick="ImaginaryWorld.missionDone(<?=$king->id?>, 'day')">Do mission</button>
+							<button onclick="ImaginaryWorld.fightKing(<?=$king->id?>, 'day')">Fight king</button>
 						</div>
 					<? } ?>
 				</div>
@@ -42,7 +42,7 @@
 						<div class="mission">
 							<h3><?=$king->title?></h3>
 							<p><?=$king->description?></p>
-							<button onclick="ImaginaryWorld.missionDone(<?=$king->id?>, 'night')">Do mission</button>
+							<button onclick="ImaginaryWorld.fightKing(<?=$king->id?>, 'night')">Fight king</button>
 						</div>
 					<? } ?>
 				</div>
