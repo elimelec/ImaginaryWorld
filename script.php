@@ -1,5 +1,5 @@
 <?php 
-	include 'missions.php';
+	include 'missions_db.php';
 	header('Content-Type: application/javascript');
 ?>
 
