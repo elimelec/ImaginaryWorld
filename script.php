@@ -128,11 +128,9 @@ var ImaginaryWorld = {
 		switch (time) {
 		case "day":
 			this.player.xp += this.day.missions[id].difficulty;
-			this.player.hp += 10;
 			break;
 		case "night":
 			this.player.xp += this.night.missions[id].difficulty;
-			this.player.hp -= 10;
 			break;
 		}
 		this.saveMissionsKingsProgress("m", id, time);
