@@ -10,6 +10,7 @@ var ImaginaryWorld = {
 		hp: 100,
 		xp: 0,
 		time: "day",
+		disableNameUpdate: false,
 	},
 	
 	savingLoop: function() {
@@ -90,7 +91,9 @@ var ImaginaryWorld = {
 	},
 	
 	updateVariables: function() {
-		$("#name").text(this.player.name);
+		if(!this.player.disableNameUpdate) {
+			$("#name").text(this.player.name);		
+		}
 		$("#hp").text(this.player.hp);
 		$("#xp").text(this.player.xp);
 		$("#time").text(this.player.time);
@@ -197,6 +200,7 @@ var ImaginaryWorld = {
 	
 	updateName: function() {
 		this.player.name = $("#name").text();
+		this.player.disableNameUpdate = false;
 		this.updateVariables();	
 	},
 	

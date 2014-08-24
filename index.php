@@ -13,7 +13,7 @@
 	<body class="day" onload="ImaginaryWorld.start()" onbeforeunload="ImaginaryWorld.save()">
 		<div class="header">
 			<h1>Imaginary World</h1>
-			<h3>Howdy, <span id="name" onblur="ImaginaryWorld.updateName()" contenteditable></span></h3>
+			<h3>Howdy, <span id="name" onfocus="ImaginaryWorld.player.disableNameUpdate = true" onblur="ImaginaryWorld.updateName()" contenteditable></span></h3>
 		</div>
 		<div class="stats">
 			<h3>HP: <span id="hp"></span></h3>
