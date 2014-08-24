@@ -22,6 +22,6 @@ $day_kings[] = new King($i++, "Dog", "Kill that annoying barking dog king.", 500
 
 $i = 0;
 $night_kings = [];
-$night_kings[] = new King($i++, "Hunt dragons", "Kill some dragons to greatly raise your experience.", 3000);
+$night_kings[] = new King($i++, "Vampire", "This king does only bad things.", 3000);
 $night_kings[] = new King($i++, "Dragon", "Who does not want the head of the dragon king?", 100000);
 
