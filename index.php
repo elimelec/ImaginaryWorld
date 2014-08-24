@@ -2,10 +2,10 @@
 	include 'missions_db.php';
 ?>
 <!DOCTYPE html>
-<html manifest="appcache.php">
+<html>
 	<head>
 		<meta name="viewport" content="width=device-width">
-		<title>Imaginary wwwworld</title>
+		<title>Imaginary World</title>
 		<link rel="stylesheet" type="text/css" href="theme.css" />
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" async></script>
 		<script type="text/javascript" src="script.php" async></script>
