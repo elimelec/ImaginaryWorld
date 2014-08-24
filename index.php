@@ -31,6 +31,7 @@
 						<div class="mission">
 							<h3><?=$mission->title?></h3>
 							<p><?=$mission->description?></p>
+							<p>XP gain: <?=$mission->difficulty?></p>
 							<button onclick="ImaginaryWorld.missionDone(<?=$mission->id?>, 'day')">Do mission</button>
 						</div>
 					<? } ?>
@@ -42,6 +43,7 @@
 						<div class="mission">
 							<h3><?=$mission->title?></h3>
 							<p><?=$mission->description?></p>
+							<p>XP gain: <?=$mission->difficulty?></p>
 							<button onclick="ImaginaryWorld.missionDone(<?=$mission->id?>, 'night')">Do mission</button>
 						</div>
 					<? } ?>
