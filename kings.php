@@ -26,11 +26,11 @@
 			<div id="day">
 				<h2>Day Missions</h2>
 				<div class="missions_container">
-					<? foreach ($day_missions as $mission) { ?>
+					<? foreach ($day_kings as $king) { ?>
 						<div class="mission">
-							<h3><?=$mission->title?></h3>
-							<p><?=$mission->description?></p>
-							<button onclick="ImaginaryWorld.missionDone(<?=$mission->id?>, 'day')">Do mission</button>
+							<h3><?=$king->title?></h3>
+							<p><?=$king->description?></p>
+							<button onclick="ImaginaryWorld.missionDone(<?=$king->id?>, 'day')">Do mission</button>
 						</div>
 					<? } ?>
 				</div>
@@ -38,11 +38,11 @@
 			<div id="night">
 				<h2>Night Missions</h2>
 				<div class="missions_container">
-					<? foreach ($night_missions as $mission) { ?>
+					<? foreach ($night_kings as $king) { ?>
 						<div class="mission">
-							<h3><?=$mission->title?></h3>
-							<p><?=$mission->description?></p>
-							<button onclick="ImaginaryWorld.missionDone(<?=$mission->id?>, 'night')">Do mission</button>
+							<h3><?=$king->title?></h3>
+							<p><?=$king->description?></p>
+							<button onclick="ImaginaryWorld.missionDone(<?=$king->id?>, 'night')">Do mission</button>
 						</div>
 					<? } ?>
 				</div>

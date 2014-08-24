@@ -1,5 +1,6 @@
 <?php 
 	include 'missions_db.php';
+	include 'kings_db.php';
 	header('Content-Type: application/javascript');
 ?>
 
@@ -120,6 +121,14 @@ var ImaginaryWorld = {
 				print "{id:{$mission->id},title:'{$mission->title}',description:'{$mission->description}',difficulty:{$mission->difficulty}},";		
 			}
 			?>
+		],
+		
+		kings: [
+			<?php
+			foreach ($day_kings as $king) {
+				print "{id:{$king->id},title:'{$king->title}',description:'{$king->description}',difficulty:{$king->difficulty}},";		
+			}
+			?>
 		]
 	},
 	
@@ -128,6 +137,14 @@ var ImaginaryWorld = {
 			<?php
 			foreach ($night_missions as $mission) {
 				print "{id:{$mission->id},title:'{$mission->title}',description:'{$mission->description}',difficulty:{$mission->difficulty}},";		
+			}
+			?>
+		],
+		
+		kings: [
+			<?php
+			foreach ($night_kings as $king) {
+				print "{id:{$king->id},title:'{$king->title}',description:'{$king->description}',difficulty:{$king->difficulty}},";		
 			}
 			?>
 		]
